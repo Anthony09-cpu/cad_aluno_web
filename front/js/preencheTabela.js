@@ -31,8 +31,17 @@ function listarAlunos(alunos){
 
         colunaSituacao.innerText = situacao;
 
-        colunaSelecionar.innerHTML = ""
+        colunaSelecionar.innerHTML = '<button type="button" class="btn btn-success">Selecionar</button>';
 
-        novaLinha.appendChild(colunaId, colunaNome, colunaNota1, colunaNota2, colunaNota3, colunaMedia, colunaSituacao, colunaSelecionar);
+        novaLinha.appendChild(colunaId);
+        novaLinha.appendChild(colunaNome);
+        novaLinha.appendChild(colunaNota1);
+        novaLinha.appendChild(colunaNota2);
+        novaLinha.appendChild(colunaNota3);
+        novaLinha.appendChild(colunaMedia);
+        novaLinha.appendChild(colunaSituacao);
+        novaLinha.appendChild(colunaSelecionar);
+
+        document.querySelector("tbody").appendChild(novaLinha);
     });
 }
