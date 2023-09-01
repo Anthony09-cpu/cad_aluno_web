@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+input{
+    margin: 10px;
+}
+
+.btn{
+    width: 100px;
+}
