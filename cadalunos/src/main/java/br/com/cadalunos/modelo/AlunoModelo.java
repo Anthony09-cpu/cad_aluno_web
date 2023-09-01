@@ -13,10 +13,11 @@ import lombok.Data;
 public class AlunoModelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
     private String nome;
     private Float nota1;
     private Float nota2;
     private Float nota3;
-    
+
 }
