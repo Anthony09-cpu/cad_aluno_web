@@ -36,7 +36,7 @@ function inserirAluno(aluno) {
 
     colunaSituacao.innerText = situacao;
 
-    colunaSelecionar.innerHTML = '<button type="button" class="btn btn-success">Selecionar</button>';
+    colunaSelecionar.innerHTML = '<button id="selecionar" type="button" class="btn btn-success">Selecionar</button>';
 
     novaLinha.appendChild(colunaId);
     novaLinha.appendChild(colunaNome);
