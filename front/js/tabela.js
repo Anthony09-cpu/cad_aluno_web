@@ -9,30 +9,37 @@ function listarAlunos(alunos) {
     alunos.forEach(aluno => {
         inserirAluno(aluno);
     });
+
+    selecionar();
 };
 
 function inserirAluno(aluno) {
     const novaLinha = document.createElement("tr");
-    let colunaId = document.createElement("td");
-    let colunaNome = document.createElement("td");
-    let colunaNota1 = document.createElement("td");
-    let colunaNota2 = document.createElement("td");
-    let colunaNota3 = document.createElement("td");
-    let colunaMedia = document.createElement("td");
-    let colunaSituacao = document.createElement("td");
-    let colunaSelecionar = document.createElement("td");
+    var colunaId = document.createElement("td");
+    var colunaNome = document.createElement("td");
+    var colunaNota1 = document.createElement("td");
+    var colunaNota2 = document.createElement("td");
+    var colunaNota3 = document.createElement("td");
+    var colunaMedia = document.createElement("td");
+    var colunaSituacao = document.createElement("td");
+    var colunaSelecionar = document.createElement("td");
 
     colunaId.innerText = aluno.id;
+    colunaId.classList.add('col-id');
     colunaNome.innerText = aluno.nome;
+    colunaNome.classList.add('col-nome');
     colunaNota1.innerText = aluno.nota1;
+    colunaNota1.classList.add('col-nota1');
     colunaNota2.innerText = aluno.nota2;
+    colunaNota2.classList.add('col-nota2');
     colunaNota3.innerText = aluno.nota3;
+    colunaNota3.classList.add('col-nota3');
 
-    let media = (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3;
+    var media = (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3;
 
     colunaMedia.innerText = media;
 
-    let situacao = (media > 7 ? "Aprovado" : "Reprovado");
+    var situacao = (media > 7 ? "Aprovado" : "Reprovado");
 
     colunaSituacao.innerText = situacao;
 

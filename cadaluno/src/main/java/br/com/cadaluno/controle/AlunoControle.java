@@ -1,4 +1,4 @@
-package br.com.cadalunos.Controle;
+package br.com.cadaluno.controle;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,12 +12,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.cadalunos.DAO.AlunoDAO;
-import br.com.cadalunos.modelo.AlunoModelo;
+import br.com.cadaluno.dao.AlunoDAO;
+import br.com.cadaluno.modelo.AlunoModelo;
 
 @RestController
 @CrossOrigin("*")
+
 public class AlunoControle {
+
     @Autowired
     AlunoDAO alunoDAO;
 
@@ -25,19 +27,19 @@ public class AlunoControle {
     public Iterable<AlunoModelo> listar(){
         return alunoDAO.findAll();
     }
+
     @PostMapping
-    public ResponseEntity<?>cadastrar(@RequestBody AlunoModelo alunoModelo){
-        return new ResponseEntity<AlunoModelo>(alunoDAO.save(alunoModelo), HttpStatus.CREATED);
+    public ResponseEntity<AlunoModelo> cadastrar(@RequestBody AlunoModelo alunoModelo){
+        return new ResponseEntity<AlunoModelo>(alunoDAO.save(alunoModelo),HttpStatus.CREATED);
     }
 
     @PutMapping
-    public ResponseEntity<?>alterar(@RequestBody AlunoModelo alunoModelo){
-        return new ResponseEntity<AlunoModelo>(alunoDAO.save(alunoModelo), HttpStatus.ACCEPTED);
+    public ResponseEntity<AlunoModelo> alterar(@RequestBody AlunoModelo alunoModelo){
+        return new ResponseEntity<AlunoModelo>(alunoDAO.save(alunoModelo),HttpStatus.ACCEPTED);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?>remover(@PathVariable Integer id){
+    public void remover(@PathVariable Integer id){
         alunoDAO.deleteById(id);
-        return new ResponseEntity<AlunoModelo>(HttpStatus.OK);
     }
 }

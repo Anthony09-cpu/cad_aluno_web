@@ -1,4 +1,4 @@
-package br.com.cadalunos.modelo;
+package br.com.cadaluno.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,13 +11,12 @@ import lombok.Data;
 @Table(name = "alunos")
 @Data
 public class AlunoModelo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Integer id;
     private String nome;
-    private Float nota1;
-    private Float nota2;
-    private Float nota3;
-
+    private float nota1;
+    private float nota2;
+    private float nota3;
 }

@@ -1,13 +1,13 @@
-package br.com.cadalunos;
+package br.com.cadaluno;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CadalunosApplication {
+public class CadalunoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CadalunosApplication.class, args);
+		SpringApplication.run(CadalunoApplication.class, args);
 	}
 
 }
