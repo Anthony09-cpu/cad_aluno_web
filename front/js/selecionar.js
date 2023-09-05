@@ -10,11 +10,11 @@ function selecionar(){
     arrayBtnsSelecionar.forEach(btn => {
         btn.addEventListener('click', function(){
             const linha = this.closest("tr");
-            id.value = linha.querySelector(".col-id");
-            nome.value = linha.querySelector(".col-nome");
-            nota1.value = linha.querySelector(".col-nota1");
-            nota2.value = linha.querySelector(".col-nota2");
-            nota3.value = linha.querySelector(".col-nota3");
+            id.value = linha.querySelector(".col-id").innerText;
+            nome.value = linha.querySelector(".col-nome").innerText;
+            nota1.value = linha.querySelector(".col-nota1").innerText;
+            nota2.value = linha.querySelector(".col-nota2").innerText;
+            nota3.value = linha.querySelector(".col-nota3").innerText;
         });
     });
 };
